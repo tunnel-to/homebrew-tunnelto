@@ -1,0 +1,33 @@
+class Tunnelto < Formula
+  desc "Public URLs for local AI agents"
+  homepage "https://tunnel.to"
+  version "0.1.0"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.0/tunnelto-darwin-arm64.tar.gz"
+      sha256 "replace-with-darwin-arm64-sha256"
+    else
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.0/tunnelto-darwin-amd64.tar.gz"
+      sha256 "replace-with-darwin-amd64-sha256"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.0/tunnelto-linux-arm64.tar.gz"
+      sha256 "replace-with-linux-arm64-sha256"
+    else
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.0/tunnelto-linux-amd64.tar.gz"
+      sha256 "replace-with-linux-amd64-sha256"
+    end
+  end
+
+  def install
+    bin.install "tunnelto"
+  end
+
+  test do
+    system "#{bin}/tunnelto", "--help"
+  end
+end
