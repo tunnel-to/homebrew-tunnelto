@@ -1,25 +1,25 @@
 class Tunnelto < Formula
   desc "Public URLs for local AI agents"
   homepage "https://tunnel.to"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.2/tunnelto-darwin-arm64.tar.gz"
-      sha256 "8e685cd4b84b9206d94f6354df7af2158c2438ae66ac21d290a1b902cb2543fa"
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.3/tunnelto-darwin-arm64.tar.gz"
+      sha256 "cd73438fe52ed8c09e1c333de2d20ed45607c2c706b442414d278e708945a3b9"
     else
-      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.2/tunnelto-darwin-amd64.tar.gz"
-      sha256 "cbd0b94dad4c83e4a6ed4183360f9b93e06fd9a307f8cecfe82e255be3cb5945"
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.3/tunnelto-darwin-amd64.tar.gz"
+      sha256 "a281695250ece075798d158405a6b1a3f35f52a08e95c7179adaee990ab89361"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.2/tunnelto-linux-arm64.tar.gz"
-      sha256 "7f7a94b1bb5cc3232bc088291366e0088049a45ed2895e9b872d7e664d1b92d9"
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.3/tunnelto-linux-arm64.tar.gz"
+      sha256 "64e9925e3ffceb30fc0023853465c0cee218eb4f27e9efb7152eed67850ad174"
     else
-      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.2/tunnelto-linux-amd64.tar.gz"
-      sha256 "c12029f69b2ce944862ffdcc3ecea3f3966dea10e9498ee91f20478d45082f88"
+      url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.3/tunnelto-linux-amd64.tar.gz"
+      sha256 "08fc000717370d6553b7c5e40cd7359f6f3abb1cc1117feee9ca7875b93d963f"
     end
   end
 
@@ -28,6 +28,6 @@ class Tunnelto < Formula
   end
 
   test do
-    assert_match "tunnelto 0.1.2", shell_output("#{bin}/tunnelto --version")
+    assert_match "tunnelto 0.1.3", shell_output("#{bin}/tunnelto --version")
   end
 end
