@@ -1,8 +1,6 @@
 class Tunnelto < Formula
   desc "Public URLs for local AI agents"
   homepage "https://tunnel.to"
-  version "0.1.6"
-
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tunnel-to/tunnelto-client/releases/download/v0.1.6/tunnelto-darwin-arm64.tar.gz"
